@@ -56,7 +56,7 @@ namespace IrMemo
         Image Word = Image.FromFile("Word.bmp");
         Image Back = Image.FromFile("Back.bmp");
 
-        C1 C;
+        Fill C;
 
         public void Form1_Load(object sender, EventArgs e)
         {
@@ -65,7 +65,7 @@ namespace IrMemo
             dGVWords.Width = 304;
 
 
-            C = new C1(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
+            C = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
 
             
         }
@@ -130,20 +130,20 @@ namespace IrMemo
             
             tcMenuAndOptions.TabPages.Add(tabPage1);
             tcMenuAndOptions.TabPages.Remove(tabPage2);
-            C = new C1(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
+            C = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
             if (cbComplexity.SelectedIndex == 1)
             {
                 panel1.Height = 1070;
                 dGVPlayingField.RowCount = 5;
                 dGVWords.RowCount = 10;
-                C = new C1(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
+                C = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
             }
             else
             {
                 panel1.Height = 870;
                 dGVPlayingField.RowCount = 4;
                 dGVWords.RowCount = 8;
-                C = new C1(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
+                C = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
             }
             if (comboBox1.SelectedIndex > 1)
             {
@@ -237,7 +237,7 @@ namespace IrMemo
             bOptions.Enabled = true;
             bStartGame.Enabled = true;
             bExit.Enabled = true;
-            C = new C1(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
+            C = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
             LeftWord = 0;
             label5.Text = "";
 
