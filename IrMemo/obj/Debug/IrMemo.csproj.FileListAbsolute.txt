@@ -1,0 +1,69 @@
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\bin\Debug\IrMemo.exe.config
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\bin\Debug\IrMemo.exe
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\bin\Debug\IrMemo.pdb
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\obj\Debug\IrMemo.csproj.AssemblyReference.cache
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\obj\Debug\IrMemo.Form1.resources
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\obj\Debug\IrMemo.Properties.Resources.resources
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\obj\Debug\IrMemo.csproj.GenerateResource.cache
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\obj\Debug\IrMemo.csproj.CoreCompileInputs.cache
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\obj\Debug\IrMemo.exe
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\obj\Debug\IrMemo.pdb
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\obj\Debug\IrMemo.Form2.resources
+C:\Users\Dzabo\source\repos\IrMemo\IrMemo\obj\Debug\IrMemo.Form3_StartGame.resources
+C:\Users\Azam\Downloads\IrMemo\IrMemo\bin\Debug\IrMemo.exe.config
+C:\Users\Azam\Downloads\IrMemo\IrMemo\bin\Debug\IrMemo.exe
+C:\Users\Azam\Downloads\IrMemo\IrMemo\bin\Debug\IrMemo.pdb
+C:\Users\Azam\Downloads\IrMemo\IrMemo\obj\Debug\IrMemo.csproj.AssemblyReference.cache
+C:\Users\Azam\Downloads\IrMemo\IrMemo\obj\Debug\IrMemo.csproj.SuggestedBindingRedirects.cache
+C:\Users\Azam\Downloads\IrMemo\IrMemo\obj\Debug\IrMemo.Form3_StartGame.resources
+C:\Users\Azam\Downloads\IrMemo\IrMemo\obj\Debug\IrMemo.Properties.Resources.resources
+C:\Users\Azam\Downloads\IrMemo\IrMemo\obj\Debug\IrMemo.csproj.GenerateResource.cache
+C:\Users\Azam\Downloads\IrMemo\IrMemo\obj\Debug\IrMemo.csproj.CoreCompileInputs.cache
+C:\Users\Azam\Downloads\IrMemo\IrMemo\obj\Debug\IrMemo.exe
+C:\Users\Azam\Downloads\IrMemo\IrMemo\obj\Debug\IrMemo.pdb
+C:\Users\Azam\Downloads\IrMemo\IrMemo\obj\Debug\IrMemo.Menu.resources
+C:\Users\Azam\Downloads\IrMemo\IrMemo\obj\Debug\IrMemo.Options.resources
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\bin\Debug\IrMemo.exe.config
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\bin\Debug\IrMemo.exe
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\bin\Debug\IrMemo.pdb
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\obj\Debug\IrMemo.csproj.AssemblyReference.cache
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\obj\Debug\IrMemo.csproj.SuggestedBindingRedirects.cache
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\obj\Debug\IrMemo.Menu.resources
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\obj\Debug\IrMemo.Form3_StartGame.resources
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\obj\Debug\IrMemo.Properties.Resources.resources
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\obj\Debug\IrMemo.csproj.GenerateResource.cache
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\obj\Debug\IrMemo.csproj.CoreCompileInputs.cache
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\obj\Debug\IrMemo.exe
+C:\Users\Azam\Downloads\IrMemo V.2\IrMemo\obj\Debug\IrMemo.pdb
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\bin\Debug\IrMemo.exe.config
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\bin\Debug\IrMemo.exe
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\bin\Debug\IrMemo.pdb
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\obj\Debug\IrMemo.csproj.AssemblyReference.cache
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\obj\Debug\IrMemo.csproj.SuggestedBindingRedirects.cache
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\obj\Debug\IrMemo.Menu.resources
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\obj\Debug\IrMemo.Properties.Resources.resources
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\obj\Debug\IrMemo.csproj.GenerateResource.cache
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\obj\Debug\IrMemo.csproj.CoreCompileInputs.cache
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\obj\Debug\IrMemo.exe
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\obj\Debug\IrMemo.pdb
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\bin\Debug\Interop.WMPLib.dll
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\obj\Debug\Interop.WMPLib.dll
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Azam\Downloads\IrMemo V.3\IrMemo\obj\Debug\IrMemo.csproj.ResolveComReference.cache
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\bin\Debug\IrMemo.exe.config
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\bin\Debug\IrMemo.exe
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\bin\Debug\IrMemo.pdb
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\bin\Debug\Interop.WMPLib.dll
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\obj\Debug\IrMemo.csproj.AssemblyReference.cache
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\obj\Debug\IrMemo.csproj.SuggestedBindingRedirects.cache
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\obj\Debug\Interop.WMPLib.dll
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\obj\Debug\IrMemo.csproj.ResolveComReference.cache
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\obj\Debug\IrMemo.Menu.resources
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\obj\Debug\IrMemo.Properties.Resources.resources
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\obj\Debug\IrMemo.csproj.GenerateResource.cache
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\obj\Debug\IrMemo.csproj.CoreCompileInputs.cache
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\obj\Debug\IrMemo.exe
+C:\Users\Azam\Desktop\IrMemo V.3\IrMemo\obj\Debug\IrMemo.pdb
