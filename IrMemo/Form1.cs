@@ -48,6 +48,7 @@ namespace IrMemo
         int CellClickCounter = 0;
         int LeftWord = 0;
         int Timer = 0;
+        int GameGo = 0;
 
 
 
@@ -81,6 +82,8 @@ namespace IrMemo
          
         private void bStartGame_Click(object sender, EventArgs e)
         {
+            Timer = 0;
+            GameGo = 0;
             dGVPlayingField.Enabled = true;
             bOptions.Enabled = false;
             bStartGame.Enabled = false;
@@ -207,7 +210,7 @@ namespace IrMemo
                     str2 = str2.Remove(str2.Length - 1);
                     if (str1 == str2 && C.GetC(FirstClickRow, FirstClickColum) != C.GetC(SecondClickRow, SecondClickColum))
                     {
-
+                        GameGo++;
                         dGVWords.Rows[LeftWord].Cells[0].Value = (Image)Properties.Resources.ResourceManager.GetObject(C.GetC(FirstClickRow, FirstClickColum));
                         dGVWords.Rows[LeftWord].Cells[1].Value = (Image)Properties.Resources.ResourceManager.GetObject(C.GetC(SecondClickRow, SecondClickColum));
                         LeftWord++;
@@ -261,7 +264,7 @@ namespace IrMemo
                 if (Timer-1 == -1)
                 {
                     dGVPlayingField.Enabled = false;
-                    timer1.Stop();
+                    timer1.Enabled = false;
                     label5.Text = "Время истекло";
                 }
 
@@ -272,6 +275,10 @@ namespace IrMemo
                 int TimerMin = Timer / 60;
                 int TimerSec = Timer % 60;
                 label5.Text = "" + TimerMin + ":" + TimerSec;
+                if (GameGo == dGVPlayingField.RowCount * dGVPlayingField.ColumnCount / 2)
+                {
+                    timer1.Enabled = false;
+                }
             }
 
         }
