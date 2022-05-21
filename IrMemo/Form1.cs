@@ -57,7 +57,8 @@ namespace IrMemo
         Image Word = Image.FromFile("Word.bmp");
         Image Back = Image.FromFile("Back.bmp");
 
-        Fill C;
+        Fill CardsFill;
+        Clock Time;
 
         public void Form1_Load(object sender, EventArgs e)
         {
@@ -66,7 +67,7 @@ namespace IrMemo
             dGVWords.Width = 304;
 
 
-            C = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
+            CardsFill = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
 
             
         }
@@ -130,23 +131,23 @@ namespace IrMemo
 
         private void bOptionsAccept_Click(object sender, EventArgs e)
         {
-            
+            lTime.Visible = false;
             tcMenuAndOptions.TabPages.Add(tabPage1);
             tcMenuAndOptions.TabPages.Remove(tabPage2);
-            C = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
+            CardsFill = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
             if (cbComplexity.SelectedIndex == 1)
             {
                 panel1.Height = 1070;
                 dGVPlayingField.RowCount = 5;
                 dGVWords.RowCount = 10;
-                C = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
+                CardsFill = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
             }
             else
             {
                 panel1.Height = 870;
                 dGVPlayingField.RowCount = 4;
                 dGVWords.RowCount = 8;
-                C = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
+                CardsFill = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
             }
             if (comboBox1.SelectedIndex > 1)
             {
@@ -159,7 +160,7 @@ namespace IrMemo
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (C.GetC(e.RowIndex, e.ColumnIndex) != "Deleted.bmp")
+            if (CardsFill.GetC(e.RowIndex, e.ColumnIndex) != "Deleted.bmp")
             {
 
 
@@ -169,11 +170,11 @@ namespace IrMemo
 
                 if (cbСards.SelectedIndex == 1)
                 {
-                    dGVPlayingField.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = (Image)Properties.Resources.ResourceManager.GetObject(C.GetC(e.RowIndex, e.ColumnIndex));
+                    dGVPlayingField.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = (Image)Properties.Resources.ResourceManager.GetObject(CardsFill.GetC(e.RowIndex, e.ColumnIndex));
                 }
                 if(cbСards.SelectedIndex == 0)
                 {
-                    dGVPlayingField.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = Image.FromFile("Слова с картиками/" + C.GetC(e.RowIndex, e.ColumnIndex) + ".bmp");
+                    dGVPlayingField.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = Image.FromFile("WordsWithImage/" + CardsFill.GetC(e.RowIndex, e.ColumnIndex) + ".bmp");
                 }
               
 
@@ -181,7 +182,7 @@ namespace IrMemo
                 {
 
                     var wmp = new WMPLib.WindowsMediaPlayer();
-                    wmp.URL = "Audio/" + C.GetC(e.RowIndex, e.ColumnIndex) + ".mp3";
+                    wmp.URL = "Audio/" + CardsFill.GetC(e.RowIndex, e.ColumnIndex) + ".mp3";
                     wmp.controls.play();
 
                     FirstClickRow = e.RowIndex;
@@ -192,7 +193,7 @@ namespace IrMemo
                 if (CellClickCounter == 2)
                 {
                     var wmp = new WMPLib.WindowsMediaPlayer();
-                    wmp.URL = "Audio/" + C.GetC(e.RowIndex, e.ColumnIndex) + ".mp3";
+                    wmp.URL = "Audio/" + CardsFill.GetC(e.RowIndex, e.ColumnIndex) + ".mp3";
                     wmp.controls.play();
 
                     dGVPlayingField.Refresh();
@@ -204,18 +205,18 @@ namespace IrMemo
                     SecondClickColum = e.ColumnIndex;
                     CellClickCounter = 0;
 
-                    string str1 = C.GetC(FirstClickRow, FirstClickColum);
+                    string str1 = CardsFill.GetC(FirstClickRow, FirstClickColum);
                     str1 = str1.Remove(str1.Length - 1);
-                    string str2 = C.GetC(SecondClickRow, SecondClickColum);
+                    string str2 = CardsFill.GetC(SecondClickRow, SecondClickColum);
                     str2 = str2.Remove(str2.Length - 1);
-                    if (str1 == str2 && C.GetC(FirstClickRow, FirstClickColum) != C.GetC(SecondClickRow, SecondClickColum))
+                    if (str1 == str2 && CardsFill.GetC(FirstClickRow, FirstClickColum) != CardsFill.GetC(SecondClickRow, SecondClickColum))
                     {
                         GameGo++;
-                        dGVWords.Rows[LeftWord].Cells[0].Value = (Image)Properties.Resources.ResourceManager.GetObject(C.GetC(FirstClickRow, FirstClickColum));
-                        dGVWords.Rows[LeftWord].Cells[1].Value = (Image)Properties.Resources.ResourceManager.GetObject(C.GetC(SecondClickRow, SecondClickColum));
+                        dGVWords.Rows[LeftWord].Cells[0].Value = (Image)Properties.Resources.ResourceManager.GetObject(CardsFill.GetC(FirstClickRow, FirstClickColum));
+                        dGVWords.Rows[LeftWord].Cells[1].Value = (Image)Properties.Resources.ResourceManager.GetObject(CardsFill.GetC(SecondClickRow, SecondClickColum));
                         LeftWord++;
-                        C.set(FirstClickRow, FirstClickColum, "Deleted.bmp");
-                        C.set(SecondClickRow, SecondClickColum, "Deleted.bmp");
+                        CardsFill.set(FirstClickRow, FirstClickColum, "Deleted.bmp");
+                        CardsFill.set(SecondClickRow, SecondClickColum, "Deleted.bmp");
                         dGVPlayingField.Rows[FirstClickRow].Cells[FirstClickColum].Value = Deleted;
                         dGVPlayingField.Rows[SecondClickRow].Cells[SecondClickColum].Value = Deleted;
 
@@ -240,9 +241,9 @@ namespace IrMemo
             bOptions.Enabled = true;
             bStartGame.Enabled = true;
             bExit.Enabled = true;
-            C = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
+            CardsFill = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
             LeftWord = 0;
-            label5.Text = "";
+            lTime.Text = "";
 
             this.Controls.Remove(panel1);
         }
@@ -255,26 +256,25 @@ namespace IrMemo
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Time = new Clock();
             if (comboBox1.SelectedIndex > 1)
             {
+                lTime.Visible = true;
                 Timer--;
-                int TimerMin = Timer / 60;
-                int TimerSec = Timer % 60;
-                label5.Text = "" + TimerMin + ":" + TimerSec;
+                lTime.Text = Time.Stopatch(Timer);
                 if (Timer-1 == -1)
                 {
                     dGVPlayingField.Enabled = false;
                     timer1.Enabled = false;
-                    label5.Text = "Время истекло";
+                    lTime.Text = "Время истекло";
                 }
 
             }
             if (comboBox1.SelectedIndex ==  1)
             {
+                lTime.Visible = true;
                 Timer++;
-                int TimerMin = Timer / 60;
-                int TimerSec = Timer % 60;
-                label5.Text = "" + TimerMin + ":" + TimerSec;
+                lTime.Text = Time.Stopatch(Timer);
                 if (GameGo == dGVPlayingField.RowCount * dGVPlayingField.ColumnCount / 2)
                 {
                     timer1.Enabled = false;
