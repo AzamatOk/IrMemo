@@ -197,10 +197,7 @@ namespace IrMemo
                     wmp.controls.play();
 
                     dGVPlayingField.Refresh();
-
-                    
-
-
+                 
                     SecondClickRow = e.RowIndex;
                     SecondClickColum = e.ColumnIndex;
                     CellClickCounter = 0;
@@ -267,6 +264,10 @@ namespace IrMemo
                     dGVPlayingField.Enabled = false;
                     timer1.Enabled = false;
                     lTime.Text = "Время истекло";
+                }
+                if (GameGo == dGVPlayingField.RowCount * dGVPlayingField.ColumnCount / 2)
+                {
+                    timer1.Enabled = false;
                 }
 
             }
