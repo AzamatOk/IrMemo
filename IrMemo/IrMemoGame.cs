@@ -17,7 +17,7 @@ namespace IrMemo
             cbComplexity.SelectedIndex = 0;
             cbСards.SelectedIndex = 1;
             cbСardsType.SelectedIndex = 1;
-            comboBox1.SelectedIndex = 0;
+            cBTimer.SelectedIndex = 0;
             tcMenuAndOptions.TabPages.Remove(tabPage2);
             this.WindowState = FormWindowState.Maximized;
             this.BackgroundImage = Image.FromFile("fon.jpg");
@@ -31,7 +31,11 @@ namespace IrMemo
             cbComplexity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             cbСards.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             cbСardsType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cBTimer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bEndGame.BackColor = System.Drawing.Color.Transparent;
+            this.bEndGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             panel1.Visible = false;
             dGVPlayingField.Visible = false;
             dGVPlayingField.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -66,10 +70,7 @@ namespace IrMemo
             dGVWords.RowCount = 8;
             dGVWords.Width = 304;
 
-
-            CardsFill = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
-
-            
+            CardsFill = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);           
         }
 
 
@@ -90,15 +91,14 @@ namespace IrMemo
             bStartGame.Enabled = false;
             bExit.Enabled = false;
             timer1.Enabled = true;
-            if (comboBox1.SelectedIndex > 1)
+            if (cBTimer.SelectedIndex > 1)
             {
-                Timer = Convert.ToInt32( this.comboBox1.GetItemText(this.comboBox1.SelectedItem));               
+                Timer = Convert.ToInt32( this.cBTimer.GetItemText(this.cBTimer.SelectedItem));               
             }
 
 
             this.Controls.Add(panel1);
             panel1.Refresh();
-
 
             DataGridWidth = dGVPlayingField.ColumnCount * 150 + 2;
             DataGridHeight = dGVPlayingField.RowCount * 100 + 2;
@@ -134,39 +134,34 @@ namespace IrMemo
             lTime.Visible = false;
             tcMenuAndOptions.TabPages.Add(tabPage1);
             tcMenuAndOptions.TabPages.Remove(tabPage2);
-            CardsFill = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
             if (cbComplexity.SelectedIndex == 1)
             {
                 panel1.Height = 1070;
                 dGVPlayingField.RowCount = 5;
                 dGVWords.RowCount = 10;
-                CardsFill = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
+
             }
             else
             {
                 panel1.Height = 870;
                 dGVPlayingField.RowCount = 4;
                 dGVWords.RowCount = 8;
-                CardsFill = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
-            }
-            if (comboBox1.SelectedIndex > 1)
-            {
-                string selectedText = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
-            }
 
+            }
+            if (cBTimer.SelectedIndex > 1)
+            {
+                string selectedText = this.cBTimer.GetItemText(this.cBTimer.SelectedItem);
+            }
+            CardsFill = new Fill(dGVPlayingField.RowCount, dGVPlayingField.ColumnCount, cbСardsType.SelectedIndex);
         }
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
             if (CardsFill.GetC(e.RowIndex, e.ColumnIndex) != "Deleted.bmp")
             {
 
-
-
                 CellClickCounter++;
-
 
                 if (cbСards.SelectedIndex == 1)
                 {
@@ -216,12 +211,9 @@ namespace IrMemo
                         CardsFill.set(SecondClickRow, SecondClickColum, "Deleted.bmp");
                         dGVPlayingField.Rows[FirstClickRow].Cells[FirstClickColum].Value = Deleted;
                         dGVPlayingField.Rows[SecondClickRow].Cells[SecondClickColum].Value = Deleted;
-
-
                     }
                     else
                     {
-
                         dGVPlayingField.Rows[FirstClickRow].Cells[FirstClickColum].Value = Back;
                         dGVPlayingField.Rows[SecondClickRow].Cells[SecondClickColum].Value = Back;
                     }
@@ -245,16 +237,10 @@ namespace IrMemo
             this.Controls.Remove(panel1);
         }
 
-        private void dGVWords_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             Time = new Clock();
-            if (comboBox1.SelectedIndex > 1)
+            if (cBTimer.SelectedIndex > 1)
             {
                 lTime.Visible = true;
                 Timer--;
@@ -271,7 +257,7 @@ namespace IrMemo
                 }
 
             }
-            if (comboBox1.SelectedIndex ==  1)
+            if (cBTimer.SelectedIndex ==  1)
             {
                 lTime.Visible = true;
                 Timer++;

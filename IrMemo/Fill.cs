@@ -52,6 +52,18 @@ namespace IrMemo
             {
                 PictureArray[a, b] = s;
             }
+
+            public int RowsCount(int a)
+            {
+                if (a == 1)
+                {
+                    return 5;
+                }
+                else
+                {
+                    return 4;
+                }
+            }
         }
     }
 }

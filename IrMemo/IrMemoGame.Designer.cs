@@ -43,7 +43,7 @@ namespace IrMemo
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.bOptions = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cBTimer = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbСardsType = new System.Windows.Forms.ComboBox();
@@ -140,7 +140,7 @@ namespace IrMemo
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
-            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.cBTimer);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.cbСardsType);
@@ -157,11 +157,11 @@ namespace IrMemo
             this.tabPage2.Text = "Настройки";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cBTimer
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cBTimer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cBTimer.FormattingEnabled = true;
+            this.cBTimer.Items.AddRange(new object[] {
             "Отключено",
             "Секундомер",
             "40 ",
@@ -170,10 +170,10 @@ namespace IrMemo
             "70",
             "80",
             "90"});
-            this.comboBox1.Location = new System.Drawing.Point(225, 177);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(108, 27);
-            this.comboBox1.TabIndex = 8;
+            this.cBTimer.Location = new System.Drawing.Point(225, 177);
+            this.cBTimer.Name = "cBTimer";
+            this.cBTimer.Size = new System.Drawing.Size(108, 27);
+            this.cBTimer.TabIndex = 8;
             // 
             // label4
             // 
@@ -202,7 +202,7 @@ namespace IrMemo
             "Дикие животные",
             "Природа",
             "Домашние животные"});
-            this.cbСardsType.Location = new System.Drawing.Point(139, 233);
+            this.cbСardsType.Location = new System.Drawing.Point(135, 233);
             this.cbСardsType.Name = "cbСardsType";
             this.cbСardsType.Size = new System.Drawing.Size(197, 27);
             this.cbСardsType.TabIndex = 5;
@@ -210,16 +210,16 @@ namespace IrMemo
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 122);
+            this.label2.Location = new System.Drawing.Point(3, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(271, 21);
+            this.label2.Size = new System.Drawing.Size(170, 21);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Отображать картинки к словам?";
+            this.label2.Text = "Уровень сложности";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 59);
+            this.label1.Location = new System.Drawing.Point(3, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 21);
             this.label1.TabIndex = 3;
@@ -241,11 +241,11 @@ namespace IrMemo
             this.cbСards.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbСards.FormattingEnabled = true;
             this.cbСards.Items.AddRange(new object[] {
-            "Да",
-            "Нет"});
-            this.cbСards.Location = new System.Drawing.Point(276, 120);
+            "Обучающий",
+            "Владеющий языком"});
+            this.cbСards.Location = new System.Drawing.Point(169, 120);
             this.cbСards.Name = "cbСards";
-            this.cbСards.Size = new System.Drawing.Size(57, 27);
+            this.cbСards.Size = new System.Drawing.Size(163, 27);
             this.cbСards.TabIndex = 1;
             // 
             // cbComplexity
@@ -262,6 +262,7 @@ namespace IrMemo
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.lTime);
             this.panel1.Controls.Add(this.dGVWords);
@@ -331,7 +332,6 @@ namespace IrMemo
             this.dGVWords.RowHeadersVisible = false;
             this.dGVWords.Size = new System.Drawing.Size(206, 150);
             this.dGVWords.TabIndex = 2;
-            this.dGVWords.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVWords_CellContentClick);
             // 
             // Column5
             // 
@@ -488,7 +488,7 @@ namespace IrMemo
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.DataGridView dGVWords;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cBTimer;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lTime;
         private System.Windows.Forms.Timer timer1;
