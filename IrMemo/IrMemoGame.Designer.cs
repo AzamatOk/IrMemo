@@ -170,25 +170,25 @@ namespace IrMemo
             "70",
             "80",
             "90"});
-            this.cBTimer.Location = new System.Drawing.Point(225, 177);
+            this.cBTimer.Location = new System.Drawing.Point(224, 180);
             this.cBTimer.Name = "cBTimer";
-            this.cBTimer.Size = new System.Drawing.Size(108, 27);
+            this.cBTimer.Size = new System.Drawing.Size(112, 27);
             this.cBTimer.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(3, 180);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 19);
+            this.label4.Size = new System.Drawing.Size(218, 42);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Ограничение по времени (сек)";
+            this.label4.Text = "Ограничение по времени \r\n(в секундах)\r\n";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 239);
+            this.label3.Location = new System.Drawing.Point(3, 250);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 21);
             this.label3.TabIndex = 6;
@@ -202,9 +202,9 @@ namespace IrMemo
             "Дикие животные",
             "Природа",
             "Домашние животные"});
-            this.cbСardsType.Location = new System.Drawing.Point(135, 233);
+            this.cbСardsType.Location = new System.Drawing.Point(135, 250);
             this.cbСardsType.Name = "cbСardsType";
-            this.cbСardsType.Size = new System.Drawing.Size(197, 27);
+            this.cbСardsType.Size = new System.Drawing.Size(201, 27);
             this.cbСardsType.TabIndex = 5;
             // 
             // label2
@@ -243,13 +243,14 @@ namespace IrMemo
             this.cbСards.Items.AddRange(new object[] {
             "Обучающий",
             "Владеющий языком"});
-            this.cbСards.Location = new System.Drawing.Point(169, 120);
+            this.cbСards.Location = new System.Drawing.Point(179, 120);
             this.cbСards.Name = "cbСards";
-            this.cbСards.Size = new System.Drawing.Size(163, 27);
+            this.cbСards.Size = new System.Drawing.Size(157, 27);
             this.cbСards.TabIndex = 1;
             // 
             // cbComplexity
             // 
+            this.cbComplexity.BackColor = System.Drawing.Color.White;
             this.cbComplexity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbComplexity.FormattingEnabled = true;
             this.cbComplexity.Items.AddRange(new object[] {
@@ -257,7 +258,7 @@ namespace IrMemo
             "5 на 4"});
             this.cbComplexity.Location = new System.Drawing.Point(151, 57);
             this.cbComplexity.Name = "cbComplexity";
-            this.cbComplexity.Size = new System.Drawing.Size(182, 27);
+            this.cbComplexity.Size = new System.Drawing.Size(185, 27);
             this.cbComplexity.TabIndex = 0;
             // 
             // panel1

@@ -28,19 +28,22 @@ namespace IrMemo
             this.tcMenuAndOptions.BackColor = System.Drawing.Color.Transparent;
             this.bOptions.BackColor = System.Drawing.Color.Transparent;
             this.bOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbComplexity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cbСards.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cbСardsType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cBTimer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bEndGame.BackColor = System.Drawing.Color.Transparent;
             this.bEndGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bOptionsAccept.BackColor = System.Drawing.Color.Transparent;
+            this.bOptionsAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             panel1.Visible = false;
             dGVPlayingField.Visible = false;
             dGVPlayingField.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dGVWords.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             this.Controls.Remove(panel1);
+            cbComplexity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cBTimer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbСards.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbСardsType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+
         }
         int dGVWordsHeight = 0;
         int DataGridWidth = 0;
