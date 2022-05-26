@@ -13,20 +13,43 @@ namespace IrMemo
             string[,] PictureArray;
             public Fill(int a,int b, int type)
             {
-                for (int i = 0; i < a * b; i++)
+
+                string[] allfiles = System.IO.Directory.GetFiles(@"WordsWithImage", "_" + type + "*.bmp");
+                foreach (string filename in allfiles)
                 {
-                    
-                    string name = "";
-                    int IrOrRus = 0, WordIndex = i;
-                    if (i > a * b / 2 - 1)
-                    {
-                        IrOrRus = 1;
-                        WordIndex = i % (a * b / 2);
-                    }
-                    name += "_" + type.ToString() + "_" + WordIndex.ToString() + "_" + IrOrRus.ToString();
-                    Cards.Add(name);
-                    
+                    string s = filename.Substring(15);
+                    s = s.Remove(s.Length - 4); 
+                    Cards.Add(s);
+
+
+
                 }
+
+                while (Cards.Count > a * b)
+                {
+                    Random rand = new Random();
+                    int r = rand.Next(0, Cards.Count);
+
+
+                    Cards.Remove("_" + type + "_" + r + "_" + "0");
+                    Cards.Remove("_" + type + "_" + r + "_" + "1");
+                }
+
+
+                for (int i = 0; i < (a*b-Cards.Count)/2; i++)
+                {
+                    Random rand = new Random();
+                    int r = rand.Next(0, Cards.Count);
+                    if (r % 2 == 0)
+                    {
+                        Cards.Remove("_" + type + "_" + r + "_" + "0");
+                        Cards.Remove("_" + type + "_" + r + "_" + "1");
+                    }
+
+                    Cards.Remove("_" + type + "_" + r + "_" + "0");
+                    Cards.Remove("_" + type + "_" + r + "_" + "1");
+                }
+                
 
                var random = new Random(DateTime.Now.Millisecond);
                Cards = Cards.OrderBy(x => random.Next()).ToList();

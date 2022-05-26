@@ -30,6 +30,8 @@ namespace IrMemo
             this.bOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lTime.BackColor = System.Drawing.Color.Transparent;
+            this.lTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bEndGame.BackColor = System.Drawing.Color.Transparent;
             this.bEndGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bOptionsAccept.BackColor = System.Drawing.Color.Transparent;
@@ -163,6 +165,7 @@ namespace IrMemo
         {
             if (CardsFill.GetC(e.RowIndex, e.ColumnIndex) != "Deleted.bmp")
             {
+                //bOptions.Text = CardsFill.GetC(e.RowIndex, e.ColumnIndex);
 
                 CellClickCounter++;
 
