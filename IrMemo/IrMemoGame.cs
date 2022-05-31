@@ -163,18 +163,18 @@ namespace IrMemo
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (CardsFill.GetC(e.RowIndex, e.ColumnIndex) != "Deleted.bmp")
+            if (CardsFill.GetnIdices(e.RowIndex, e.ColumnIndex) != "Deleted.bmp")
             {
 
                 CellClickCounter++;
 
                 if (cbСards.SelectedIndex == 1)
                 {
-                    dGVPlayingField.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = (Image)Properties.Resources.ResourceManager.GetObject(CardsFill.GetC(e.RowIndex, e.ColumnIndex));
+                    dGVPlayingField.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = (Image)Properties.Resources.ResourceManager.GetObject(CardsFill.GetnIdices(e.RowIndex, e.ColumnIndex));
                 }
                 if(cbСards.SelectedIndex == 0)
                 {
-                    dGVPlayingField.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = Image.FromFile("WordsWithImage/" + CardsFill.GetC(e.RowIndex, e.ColumnIndex) + ".bmp");
+                    dGVPlayingField.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = Image.FromFile("WordsWithImage/" + CardsFill.GetnIdices(e.RowIndex, e.ColumnIndex) + ".bmp");
                 }
               
 
@@ -182,7 +182,7 @@ namespace IrMemo
                 {
 
                     var wmp = new WMPLib.WindowsMediaPlayer();
-                    wmp.URL = "Audio/" + CardsFill.GetC(e.RowIndex, e.ColumnIndex) + ".mp3";
+                    wmp.URL = "Audio/" + CardsFill.GetnIdices(e.RowIndex, e.ColumnIndex) + ".mp3";
                     wmp.controls.play();
 
                     FirstClickRow = e.RowIndex;
@@ -193,7 +193,7 @@ namespace IrMemo
                 if (CellClickCounter == 2)
                 {
                     var wmp = new WMPLib.WindowsMediaPlayer();
-                    wmp.URL = "Audio/" + CardsFill.GetC(e.RowIndex, e.ColumnIndex) + ".mp3";
+                    wmp.URL = "Audio/" + CardsFill.GetnIdices(e.RowIndex, e.ColumnIndex) + ".mp3";
                     wmp.controls.play();
 
                     dGVPlayingField.Refresh();
@@ -202,18 +202,18 @@ namespace IrMemo
                     SecondClickColum = e.ColumnIndex;
                     CellClickCounter = 0;
 
-                    string str1 = CardsFill.GetC(FirstClickRow, FirstClickColum);
+                    string str1 = CardsFill.GetnIdices(FirstClickRow, FirstClickColum);
                     str1 = str1.Remove(str1.Length - 1);
-                    string str2 = CardsFill.GetC(SecondClickRow, SecondClickColum);
+                    string str2 = CardsFill.GetnIdices(SecondClickRow, SecondClickColum);
                     str2 = str2.Remove(str2.Length - 1);
-                    if (str1 == str2 && CardsFill.GetC(FirstClickRow, FirstClickColum) != CardsFill.GetC(SecondClickRow, SecondClickColum))
+                    if (str1 == str2 && CardsFill.GetnIdices(FirstClickRow, FirstClickColum) != CardsFill.GetnIdices(SecondClickRow, SecondClickColum))
                     {
                         GameGo++;
-                        dGVWords.Rows[LeftWord].Cells[0].Value = (Image)Properties.Resources.ResourceManager.GetObject(CardsFill.GetC(FirstClickRow, FirstClickColum));
-                        dGVWords.Rows[LeftWord].Cells[1].Value = (Image)Properties.Resources.ResourceManager.GetObject(CardsFill.GetC(SecondClickRow, SecondClickColum));
+                        dGVWords.Rows[LeftWord].Cells[0].Value = (Image)Properties.Resources.ResourceManager.GetObject(CardsFill.GetnIdices(FirstClickRow, FirstClickColum));
+                        dGVWords.Rows[LeftWord].Cells[1].Value = (Image)Properties.Resources.ResourceManager.GetObject(CardsFill.GetnIdices(SecondClickRow, SecondClickColum));
                         LeftWord++;
-                        CardsFill.set(FirstClickRow, FirstClickColum, "Deleted.bmp");
-                        CardsFill.set(SecondClickRow, SecondClickColum, "Deleted.bmp");
+                        CardsFill.SetDeleted(FirstClickRow, FirstClickColum, "Deleted.bmp");
+                        CardsFill.SetDeleted(SecondClickRow, SecondClickColum, "Deleted.bmp");
                         dGVPlayingField.Rows[FirstClickRow].Cells[FirstClickColum].Value = Deleted;
                         dGVPlayingField.Rows[SecondClickRow].Cells[SecondClickColum].Value = Deleted;
                     }

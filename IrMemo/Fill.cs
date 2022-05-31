@@ -51,26 +51,14 @@ namespace IrMemo
                     }
                 
             }
-            public string GetC(int a,int b)
+            public string GetnIdices(int a,int b)
             {
                 return PictureArray[a,b];
                 
             }
-            public void set(int a, int b, string s)
+            public void SetDeleted(int a, int b, string s)
             {
                 PictureArray[a, b] = s;
-            }
-
-            public int RowsCount(int a)
-            {
-                if (a == 1)
-                {
-                    return 5;
-                }
-                else
-                {
-                    return 4;
-                }
             }
         }
     }
