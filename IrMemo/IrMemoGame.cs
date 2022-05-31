@@ -165,7 +165,6 @@ namespace IrMemo
         {
             if (CardsFill.GetC(e.RowIndex, e.ColumnIndex) != "Deleted.bmp")
             {
-                //bOptions.Text = CardsFill.GetC(e.RowIndex, e.ColumnIndex);
 
                 CellClickCounter++;
 
