@@ -249,7 +249,7 @@ namespace IrMemo
             {
                 lTime.Visible = true;
                 Timer--;
-                lTime.Text = Time.Stopatch(Timer);
+                lTime.Text = Time.StopatchTimer(Timer);
                 if (Timer-1 == -1)
                 {
                     dGVPlayingField.Enabled = false;
@@ -266,7 +266,7 @@ namespace IrMemo
             {
                 lTime.Visible = true;
                 Timer++;
-                lTime.Text = Time.Stopatch(Timer);
+                lTime.Text = Time.StopatchTimer(Timer);
                 if (GameGo == dGVPlayingField.RowCount * dGVPlayingField.ColumnCount / 2)
                 {
                     timer1.Enabled = false;

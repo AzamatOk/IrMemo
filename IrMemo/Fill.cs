@@ -20,9 +20,6 @@ namespace IrMemo
                     string s = filename.Substring(15);
                     s = s.Remove(s.Length - 4); 
                     Cards.Add(s);
-
-
-
                 }
 
                 while (Cards.Count > a * b)

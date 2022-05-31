@@ -8,7 +8,7 @@ namespace IrMemo
 {
     internal class Clock
     {
-        public string Stopatch(int a)
+        public string StopatchTimer(int a)
         {
             int TimeMin = a / 60;
             int TimeSec = a % 60;
