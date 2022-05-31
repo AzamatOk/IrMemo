@@ -34,21 +34,6 @@ namespace IrMemo
                     Cards.Remove("_" + type + "_" + r + "_" + "0");
                     Cards.Remove("_" + type + "_" + r + "_" + "1");
                 }
-
-
-                for (int i = 0; i < (a*b-Cards.Count)/2; i++)
-                {
-                    Random rand = new Random();
-                    int r = rand.Next(0, Cards.Count);
-                    if (r % 2 == 0)
-                    {
-                        Cards.Remove("_" + type + "_" + r + "_" + "0");
-                        Cards.Remove("_" + type + "_" + r + "_" + "1");
-                    }
-
-                    Cards.Remove("_" + type + "_" + r + "_" + "0");
-                    Cards.Remove("_" + type + "_" + r + "_" + "1");
-                }
                 
 
                var random = new Random(DateTime.Now.Millisecond);
