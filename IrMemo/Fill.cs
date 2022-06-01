@@ -51,7 +51,6 @@ namespace IrMemo
             public string GetnIdices(int a,int b)
             {
                 return PictureArray[a,b];
-                
             }
             public void SetDeleted(int a, int b, string s)
             {
