@@ -248,9 +248,6 @@
     <None Include="Resources\_1_7_1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\_1_8_0.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\_1_8_1.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -342,6 +339,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\_1_5_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_1_8_0.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
