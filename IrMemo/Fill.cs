@@ -11,10 +11,10 @@ namespace IrMemo
         {
             List<string> Cards = new List<string>();
             string[,] PictureArray;
-            public Fill(int a,int b, int type)
+            public Fill(int Row,int Column, int CardType)
             {
 
-                string[] allfiles = System.IO.Directory.GetFiles(@"WordsWithImage", "_" + type + "*.bmp");
+                string[] allfiles = System.IO.Directory.GetFiles(@"WordsWithImage", "_" + CardType + "*.bmp");
                 foreach (string filename in allfiles)
                 {
                     string s = filename.Substring(15);
@@ -22,14 +22,14 @@ namespace IrMemo
                     Cards.Add(s);
                 }
 
-                while (Cards.Count > a * b)
+                while (Cards.Count > Row * Column)
                 {
                     Random rand = new Random();
                     int r = rand.Next(0, Cards.Count);
 
 
-                    Cards.Remove("_" + type + "_" + r + "_" + "0");
-                    Cards.Remove("_" + type + "_" + r + "_" + "1");
+                    Cards.Remove("_" + CardType + "_" + r + "_" + "0");
+                    Cards.Remove("_" + CardType + "_" + r + "_" + "1");
                 }
                 
 
@@ -37,10 +37,10 @@ namespace IrMemo
                Cards = Cards.OrderBy(x => random.Next()).ToList();
 
 
-                PictureArray = new string[a, b];
+                PictureArray = new string[Row, Column];
                 int CardNameIndexInList = 0;
-                for (int i = 0; i < a; i++)
-                    for (int j = 0; j < b; j++)
+                for (int i = 0; i < Row; i++)
+                    for (int j = 0; j < Column; j++)
                     {
                         
                         PictureArray[i, j] = Cards[CardNameIndexInList];
@@ -48,13 +48,13 @@ namespace IrMemo
                     }
                 
             }
-            public string GetnIdices(int a,int b)
+            public string GetnIdices(int RowsInd,int ColumnsInd)
             {
-                return PictureArray[a,b];
+                return PictureArray[RowsInd,ColumnsInd];
             }
-            public void SetDeleted(int a, int b, string s)
+            public void SetDeleted(int RowIndex, int ColumnIndex, string DelImage)
             {
-                PictureArray[a, b] = s;
+                PictureArray[RowIndex, ColumnIndex] = DelImage;
             }
         }
     }
