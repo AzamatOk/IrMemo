@@ -400,7 +400,7 @@ namespace IrMemo
             this.dGVPlayingField.RowHeadersVisible = false;
             this.dGVPlayingField.Size = new System.Drawing.Size(234, 150);
             this.dGVPlayingField.TabIndex = 0;
-            this.dGVPlayingField.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dGVPlayingField.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVPlayingField_CellContentClick);
             // 
             // Column1
             // 

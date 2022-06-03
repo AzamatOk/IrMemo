@@ -161,7 +161,7 @@ namespace IrMemo
         }
 
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dGVPlayingField_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (CardsFill.GetnIdices(e.RowIndex, e.ColumnIndex) != "Deleted.bmp")
             {
